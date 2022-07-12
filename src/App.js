@@ -4,7 +4,7 @@ import Search from "./pages/search/Search";
 import Register from "./pages/register/Register";
 
 function App() {
-  return <Search/>;
+  return <Search />;
 }
 
 export default App;
