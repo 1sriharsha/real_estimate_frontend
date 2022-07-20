@@ -1,4 +1,4 @@
-.homeContainer{
+.searchContainer{
     display: flex;
     width: 100%;
 }
@@ -7,7 +7,7 @@
 }
 
 section{
-    background :rgb(2, 2, 62);
+    background: white;
     width: 600px;
     align-items: center;
     display: flex;
@@ -31,3 +31,4 @@ filter{
     justify-content: center;
     align-items: center;
 }
+

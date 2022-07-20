@@ -1,0 +1,26 @@
+/* body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: url("../../../public/assets/houses/HouseForSale.png");
+  background-size: cover;
+  background-position: center;   
+} */
+
+/* .homeContainer{
+  display: flex;
+  width: 100%;
+} */
+
+.homeContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: 
+    url("../../../public/assets/houses/HouseForSale.png");
+  background-size: cover;
+  background-position: center;   
+}
+

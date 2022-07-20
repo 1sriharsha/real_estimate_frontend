@@ -15,14 +15,12 @@ import {
 } from "@material-ui/icons";
 import { Users } from "../../dummyData";
 
-// const Buttons = () => {
-//   console.log(Sidebar.handleSubmit)
-// }
+
 class Sidebar extends Component{
 
     constructor(props){
       super(props)
-      console.log(props)
+      console.log("sidebar from search",props)
 
       this.state=props.values;
       console.log(this.state)
@@ -45,14 +43,15 @@ class Sidebar extends Component{
       return (
           <div>
               <form onSubmit={this.handleSubmit}>
+                <h3>Search by filters</h3>
               <div className="sidebarListItemText">City: 
               <input type='text' name ='city' placeholder="Enter city" onChange={this.handleChange} value={city}></input>
               </div>
               <div className="sidebarListItemText">Bed: 
-              <input type='text' name ='bed' placeholder="Enter no.of Beds (0-4)" onChange={this.handleChange} value={bed}></input>
+              <input type='number' name ='bed' placeholder="Enter no.of Beds (0-4)" onChange={this.handleChange} value={bed}></input>
               </div>
               <div className="sidebarListItemText">Bath: 
-              <input type='text' name ='bath' placeholder="Enter no.of Baths (0-4)" onChange={this.handleChange} value={bath}></input>
+              <input type='number' name ='bath' placeholder="Enter no.of Baths (0-4)" onChange={this.handleChange} value={bath}></input>
               </div>
               <button className="submit" type='submit'>Submit Now</button>
               </form>

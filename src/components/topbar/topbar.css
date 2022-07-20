@@ -39,10 +39,10 @@
   margin-left: 10px;
 }
 
-.searchInput {
+/* .searchInput {
   border: none;
   width: 70%;
-}
+} */
 
 .searchInput:focus {
   outline: none;

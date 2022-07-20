@@ -4,7 +4,7 @@ import { baseUrl }  from "../../utils/fetchApi"
 import axios from "axios"
 // import { Search } from "@material-ui/icons";
 import SingleCard from "./SingleCard"
-import { v4 as uuid } from 'uuid';
+// import { v4 as uuid } from 'uuid';
 // import AddIcon from '@material-ui/icons/Add';
 // import * as employeeService from "../../services/employeeService";
 // import Popup from "../Popup";
@@ -19,7 +19,7 @@ import { v4 as uuid } from 'uuid';
 
 export default function AllCards(values){
     
-    const unique_id = uuid();
+    // const unique_id = uuid();
     const url = `${baseUrl}&bath=${values.values.bath}&bed=${values.values.bed}&city=${values.values.city}`
 
     const[prod,setProd]=useState([])
@@ -48,11 +48,11 @@ export default function AllCards(values){
         }],
 
         }
-        
+    
     const travel = prod.map(item=>{
         return (
             <SingleCard 
-                cardid={unique_id} 
+                // cardid={unique_id} 
                 // unikid = (unique_id)
                 {...item}
 
