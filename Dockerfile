@@ -3,4 +3,4 @@ WORKDIR /frontend
 COPY ./package.json /frontend
 RUN npm i --force
 COPY . .
-RUN npm start
+ENTRYPOINT [ "npm","start" ]
