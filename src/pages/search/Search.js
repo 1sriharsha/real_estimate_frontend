@@ -10,28 +10,60 @@ import Searchfilters from "../../components/Card/Searchfilters"
 import "./search.css"
 import data from "./data"
 import { Flex, Box, Text, Icon } from '@chakra-ui/react';
+import axios from "axios";
 
 
 export default function Search()  {  
 
-    let[location,setlocation]=useState('Southwick')
-
-    const changelocation = changedlocation=>{
-        setlocation(changedlocation)
-    }
-    
+    let[location,setlocation]=useState();
     let [values,setValues]=useState(
         {
             city:'',
             bed:'',
             bath:''
         });
-
-    const changeValues = valuesNew =>{ setValues(valuesNew);}
+    const changelocation = changedlocation=>{
+        axios({
+            method: 'get',
+            url: "https://api.bigdatacloud.net/data/reverse-geocode-client?latitude="+lat+"&longitude="+long+"&localityLanguage=en",
+            
+          }).catch(error => {
+              console.log(error);
+              
+          }).then(response => {
+              console.log(response.data.locality);
+              setValues({
+                city:response.data.locality,
+                bed:'',
+                bath:''
+            });
+            setlocation(response.data.locality);
+          });
+          
+      return 
+    }
     
+    const [lat,setLat]= useState('');
+    const [long,setLong]= useState('');
+    
+
+    navigator.geolocation.getCurrentPosition(function(position) {
+        setLat(position.coords.latitude);
+        setLong(position.coords.longitude);
+      });
+    
+      
+      
+   
+        
+    
+    const changeValues = valuesNew =>{ setValues(valuesNew);}
+    useEffect(()=>{
+        changelocation();
+    },[])
     return(
         <div >
-            <Topbar values={values} handleKeyPressloc={changeValues} />
+            <Topbar  values={values} handleKeyPressloc={changeValues} />
             <div className="searchContainer">
                 <Sidebar values={values} handleValues={changeValues} />
                 <section > 
