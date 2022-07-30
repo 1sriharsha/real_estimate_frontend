@@ -71,11 +71,12 @@ export default function Signinout(props) {
                   <TabPanel value={value} index={0}>
                 <Login handleChange={handleChange}
                 closeform = {closeform}
-                
-              />
+                />
                 </TabPanel>
                 <TabPanel value={value} index={1}>
-                <Signup/>
+                <Signup handleChange={handleChange}
+                closeform = {closeform}
+                />
                 </TabPanel>
                 </Paper>
         </Dialog>

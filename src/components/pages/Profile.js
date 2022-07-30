@@ -27,10 +27,10 @@ export default function Profile(){
   return(
     // <Forminput/>
     <React.Fragment>
-      <div className="homeContainer" >
+      <div className="profileContainer" >
+        
         {/* <button onClick={ () => setOpenPopup(true) }>Sell a property</button> */}
-        <video src='/videos/Houses.mp4' autoPlay loop muted />
-
+        {/* <video src='/videos/Houses.mp4' autoPlay loop muted /> */}
         <h1>FIND YOUR PLACE</h1>
         <p>have a property to sell?</p>
 

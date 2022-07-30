@@ -4,7 +4,6 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
 import { Formik, Form, Field, ErrorMessage } from 'formik'
-import { StarHalfRounded } from "@material-ui/icons";
 
 const Login=(propers)=>{
 

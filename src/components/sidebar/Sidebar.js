@@ -1,30 +1,15 @@
 import "./sidebar.css";
 import {useEffect, useState} from "react";
 import React, {Component} from "react";
-// import Card from "../../components/Card/Card";
-import {
-  RssFeed,
-  Chat,
-  PlayCircleFilledOutlined,
-  Group,
-  Bookmark,
-  HelpOutline,
-  WorkOutline,
-  Event,
-  School,
-} from "@material-ui/icons";
-// import { Users } from "../../dummyData";
-
 
 class Sidebar extends Component{
-
     constructor(props){
       super(props)
       console.log("sidebar from search",props)
 
       this.state=props.values;
       console.log(this.state)
-      // this.props.handleValues(this.state)
+
     }
     handleChange=(e)=>{
       this.setState({
@@ -35,8 +20,6 @@ class Sidebar extends Component{
     handleSubmit = (e)=>{
       e.preventDefault()  
       this.props.handleValues(this.state);
-
-      //  return (this.state);
     }
     render() {
       const {city, bed, bath} = this.state

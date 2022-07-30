@@ -1,6 +1,5 @@
 
 import './visualization.css';
-import VisualizeItem from './VisualizeItem';
 import Chart from "react-apexcharts";
 import React, { Component, useEffect, useRef, useState } from "react";
 import {vizurl} from "../utils/fetchApi"
@@ -26,8 +25,6 @@ function Visualize(props) {
       let colorsArr = []
       for (let i=0;i<prod.length;i++){
         if(prod[i]["state"] != ""){
-
-        
           count.push(prod[i]["count"]);
           states.push(prod[i]["state"])
           colorsArr.push(`#${Math.floor(Math.random()*16777215).toString(16)}`);
@@ -43,26 +40,9 @@ function Visualize(props) {
           
     series: count,
     options: {
-      // chart: {
-      //   width: 380,
-      //   type: 'pie',
-      // },
+
       labels: states,
-      // colors: colorsRandom
-      // responsive: [{
-      //   breakpoint: 480,
-      //   options: {
-      //     chart: {
-      //       width: 200
-      //     },
-      //     legend: {
-      //       position: 'bottom'
-      //     }
-      //   }
-      // }]
     },
-  
-  
   };
 
 
@@ -77,7 +57,6 @@ function Visualize(props) {
       chart: {
         id: "state"
       }
-
     },
     series: [
       {
@@ -92,8 +71,8 @@ function Visualize(props) {
       <div >
       <div className='cards__wrapper'>
       <ul className='cards__items'>
-      {/* 
-      <Chart className='cards__container'
+      
+      {/* <Chart className='cards__container'
               options={state.options}
               series={state.series}
               type="bar"
@@ -109,46 +88,6 @@ function Visualize(props) {
       </ul>
       </div>
       </div> 
-
-
-      {/* <div className='cards__container'>
-        <div className='cards__wrapper'>
-          <ul className='cards__items'>
-            <VisualizeItem
-              src='images/img-9.jpg'
-              text='Explore the hidden waterfall deep inside the Amazon Jungle'
-              label='Adventure'
-              path='/services'
-            />
-            <VisualizeItem
-              src='images/img-2.jpg'
-              text='Travel through the Islands of Bali in a Private Cruise'
-              label='Luxury'
-              path='/services'
-            />
-          </ul>
-          <ul className='cards__items'>
-            <VisualizeItem
-              src='images/img-3.jpg'
-              text='Set Sail in the Atlantic Ocean visiting Uncharted Waters'
-              label='Mystery'
-              path='/services'
-            />
-            <VisualizeItem
-              src='images/img-4.jpg'
-              text='Experience Football on Top of the Himilayan Mountains'
-              label='Adventure'
-              path='/products'
-            />
-            <VisualizeItem
-              src='images/img-8.jpg'
-              text='Ride through the Sahara Desert on a guided camel tour'
-              label='Adrenaline'
-              path='/sign-up'
-            />
-          </ul>
-        </div>
-      </div> */}
     </div>
   );
 }

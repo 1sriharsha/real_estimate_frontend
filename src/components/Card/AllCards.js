@@ -2,22 +2,8 @@ import React, { Component, useEffect, useRef, useState } from "react";
 import "./card.css"
 import { baseUrl }  from "../../utils/fetchApi"
 import axios from "axios"
-// import { Search } from "@material-ui/icons";
 import SingleCard from "./SingleCard"
-import Visualize from "../Visualize";
 import Chart from "react-apexcharts";
-// import { v4 as uuid } from 'uuid';
-// import AddIcon from '@material-ui/icons/Add';
-// import * as employeeService from "../../services/employeeService";
-// import Popup from "../Popup";
-// import useTable from "../useTable";
-// import EditOutlinedIcon from '@material-ui/icons/EditOutlined';
-// import CloseIcon from '@material-ui/icons/Close';
-// import Forminput from "../forminput/Forminput";
-// import Control from "../Control";
-// import { Box, Card, CardContent, Typography, CardActions,  Button, } from "@material-ui/core";
-// import { Paper, makeStyles, TableBody, TableRow, TableCell, Toolbar, InputAdornment } from '@material-ui/core';
-
 
 export default function AllCards(values){
     
@@ -44,24 +30,6 @@ export default function AllCards(values){
         
     },[prod])
     console.log("AllCards", values)
-    const mapping = {
-        id:"id",
-        one:"price",
-        two:"house_size",
-        three_one:"bed",
-        three_two:"bath",
-        four: "full_address",
-        five: "acre_lot",
-        one_content:"Price (in USD):",
-        show_card_actions:[{
-            name:"",
-            type:"",
-            method:"",
-            url:"",
-            data:"self"
-        }],
-
-        }
     const travel = prod.map(item=>{
         return (
             <SingleCard 
@@ -88,11 +56,8 @@ export default function AllCards(values){
             },
             
         },
-          
           xaxis: {
-            
             labels: {
-                
               formatter: function(val) {
                 return parseFloat(val).toFixed(1)
               }
@@ -116,7 +81,7 @@ export default function AllCards(values){
             <Chart className='cards__container'
                 options={graph.options}
                 series={graph.series}
-                type="bar"
+                type="scatter"
                 width= "500"
                 
               />

@@ -8,6 +8,7 @@ const useStyles = makeStyles(theme => ({
         margin: theme.spacing(0.5)
     },
     secondary: {
+        // palatte: {secondary: {light: '#0066ff'}},
         backgroundColor: theme.palette.secondary.light,
         '& .MuiButton-label': {
             color: theme.palette.secondary.main,

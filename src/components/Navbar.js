@@ -98,7 +98,7 @@ function Navbar() {
                 className='nav-links'
                 onClick={closeMobileMenu}
               >
-                Account
+                Profile
               </Link>
             </li>}
            
@@ -130,22 +130,9 @@ function Navbar() {
               onClick={() => { setLogin(current => !current); } } />
             </Link>
             } 
-
-            
           </div>
-          </div>
-          {/* {button && <Button buttonStyle='btn--outline' onClick={toggleIsLogin}>
-            {isLoggedIn ?
-            'SP' :
-            <a class="ej-at button text ej_af" href="../components/forminput/Login.js" >
-              login
-            </a>
-            }
-          </Button>} */}
-
+          </div>          
           
-          
-
         </div>
       </nav>
     </>
