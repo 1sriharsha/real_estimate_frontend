@@ -49,7 +49,7 @@ export default class Topbar extends Component{
             <input
               type= "text"
               name="city"
-              placeholder="Search by location"
+              placeholder="Search by location: Ex: Lynn, Petersburgh, Hudson, Webster, Southwick"
               className="searchInput"
               value={location}
               onKeyPress={this.handleKeyPress}
